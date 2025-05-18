@@ -6,6 +6,7 @@ int main(){
     int movimentoRainha = 8;
     int movimentoBispo = 5;
     int movimentoTorre = 5;
+    int movimentoCavalo = 3;
 
     //movimentação da rainha
     printf("|---Movimento da Rainha---|\n");
@@ -13,18 +14,29 @@ int main(){
         printf("Esquerda\n");
         movimentoRainha--;
     }
+
     //movimentação da bispo
     printf("|---Movimento do Bispo---|\n");
     do{
         printf("Direita/Cima\n");
         movimentoBispo--;
     }while(movimentoBispo>0);
+
     //movimentação da torre
     printf("|---Movimento da Torre---|\n");
     for(movimentoTorre; movimentoTorre>0; movimentoTorre--){
         printf("Direita\n");
     }
 
+    //movimentação do cavalo
+    printf("|---Movimento do Cavalo---|\n");
+    while(movimentoCavalo>0){
+        for(movimentoCavalo; movimentoCavalo>1; movimentoCavalo--){
+            printf("Baixo ");
+        }
+        printf("Esquerda");
+        movimentoCavalo--;
+    }
 
     return 0;
 }
